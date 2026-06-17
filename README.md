@@ -127,19 +127,22 @@
 
 ## 🚀 Installation
 
-```bash
+
 # 1. Clone the repository
+```bash
 composer create-project vfixtechnology/hello-events
 ```
 ```bash
 cd hello-events
 ```
-```bash
+
 # 2. Install PHP dependencies
+```bash
 composer install
 ```
-```bash
+
 # 3. Install JS dependencies & build
+```bash
 npm install && npm run build
 ```
 
@@ -149,7 +152,12 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-# 5. Configure DB in .env, then migrate & seed
+# 5. Make migration
+```bash
+php artisan migrate
+```
+
+# 6. Configure DB in .env, then migrate & seed
 ```bash
 php artisan migrate --seed
 ```

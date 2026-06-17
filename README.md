@@ -147,10 +147,7 @@ npm install && npm run build
 ```
 
 # 4. Environment setup
-```bash
-cp .env.example .env
-php artisan key:generate
-```
+#### Now add database & smtp credentials
 
 # 5. Make migration
 ```bash

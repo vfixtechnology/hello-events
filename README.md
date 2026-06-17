@@ -163,6 +163,10 @@ php artisan serve
 >
 
 ## 🧪 Default Credentials
+###### Admin login link: 
+```
+http://localhost:8000/login
+```
 
 ```
 📧 Email:    admin@example.com

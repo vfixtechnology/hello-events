@@ -7,6 +7,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,7 +30,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFour();
 
-        View::share('setting', Setting::first() ?? new Setting());
+        if (Schema::hasTable('settings')) {
+            View::share('setting', Setting::first() ?? new Setting());
+        } else {
+            View::share('setting', new Setting());
+        }
 
         Gate::before(function ($user, $ability) {
             return $user->id == 1 ? true : null;

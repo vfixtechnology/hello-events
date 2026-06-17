@@ -147,14 +147,10 @@ npm install && npm run build
 ```
 
 # 4. Environment setup
-#### Now add database & smtp credentials
+##### Now add database & smtp credentials
 
-# 5. Make migration
-```bash
-php artisan migrate
-```
 
-# 6. Configure DB in .env, then migrate & seed
+# 5. Configure DB in .env, then migrate & seed
 ```bash
 php artisan migrate --seed
 ```
